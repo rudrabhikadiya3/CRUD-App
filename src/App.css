@@ -32,7 +32,14 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.info-card {
+  background-color: #a6d1e6;
+  color: #7f5283;
+  max-width: 19% !important;
 }
