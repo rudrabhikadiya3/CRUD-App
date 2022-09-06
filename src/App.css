@@ -43,3 +43,33 @@
   color: #7f5283;
   max-width: 19% !important;
 }
+
+.oper_btn{
+  background-color: transparent;
+  margin-right: 10px;
+  border: none;
+  color: #3486cc;
+}
+.oper_btn .bi-trash3-fill{
+  color: #ee4a24;
+}
+.oper_btn:hover{
+  background-color: rgba(0, 0, 0, 0.500);
+}
+
+
+.create-form label{
+  color: black !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121;
+  color: whitesmoke;
+  flex-direction: column;
+}

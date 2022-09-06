@@ -1,42 +1,50 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "The 5AM Club",
-            "author": "Robin sharma",
-            "price": "150",
-            "Publisher": "Jaico books"
-        },
-        {
-            "id": 2,
-            "title": "Lokvyavhar",
-            "author": "dale carnegi",
-            "price": "200",
-            "Publisher": "Jaico books"
-        },
-        {
-            "id": 3,
-            "title": "boook2",
-            "author": "Ramesh",
-            "price": "230",
-            "Publisher": "RR boks pvt ltd"
-        },
-        {
-            "id": 4,
-            "title": "boook33",
-            "author": "Rajesh",
-            "price": "300",
-            "Publisher": "JKP pvt ltd"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "posts": [
+    {
+      "id": 44,
+      "title": "Lokvayavhar",
+      "author": "Soham",
+      "price": "299",
+      "publisher": "Rudra"
+    },
+    {
+      "id": 35,
+      "title": "A",
+      "author": "A",
+      "price": "A",
+      "publisher": "A"
+    },
+    {
+      "id": 41,
+      "title": "",
+      "author": "",
+      "price": "",
+      "publisher": ""
+    },
+    {
+      "id": 8,
+      "title": "c",
+      "author": "c",
+      "price": "c",
+      "publisher": "c"
+    },
+    {
+      "id": 14,
+      "title": "a",
+      "author": "a",
+      "price": "a",
+      "publisher": "a"
+    },
+    {
+      "id": 98,
+      "title": "a",
+      "author": "a",
+      "price": "a",
+      "publisher": "a"
     }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
 }

@@ -1,29 +1,25 @@
 import React, { useEffect } from "react";
-import { BASE_URL } from "../shared/APIkey";
 
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { readData } from "../redux/action/api.action";
+import { deletData, readData } from "../redux/action/api.action";
+
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "../App.css";
 
 function Home(props) {
-  const books = useSelector((state) => state.books.data);
-
+  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
-  let fetchData = () => {
-    try {
-      axios.get(BASE_URL + "posts").then((response) => {
-        dispatch(readData(response.data));
-        
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  useEffect(() => {
+    dispatch(readData());
+  }, []);
 
-  useEffect(()=>{
-    fetchData()
-  },[])
+  const handleEdit = (id) => {
+    dispatch(deletData(id))
+  };
+  const handleDelet = (id) => {
+    dispatch(deletData(id))
+  };
   return (
     <>
       <div className="container">
@@ -36,22 +32,35 @@ function Home(props) {
                 <th scope="col">Author</th>
                 <th scope="col">Price</th>
                 <th scope="col">Publisher</th>
+                <th scope="col">Manage</th>
               </tr>
             </thead>
             <tbody>
-              {
-                books.map((b, i) => {
+              {books.data !== null ?
+                 books.data.map((b, i) => {
+                  console.log(b.id);
                     return (
-                    <tr key={i}>
+                      <tr key={i}>
                         <th scope="row">{b.id}</th>
                         <td>{b.title}</td>
                         <td>{b.author}</td>
                         <td>{b.price}</td>
-                        <td>{b.Publisher}</td>
-                    </tr>
+                        <td>{b.publisher}</td>
+                        <td>
+                          <button
+                            className="oper_btn"
+                            onClick={() => handleEdit(b.id)}
+                          >
+                            <i className="bi bi-pencil-fill"></i>
+                          </button>
+                          <button className="oper_btn" onClick={() => handleDelet(b.id)}>
+                            <i className="bi bi-trash3-fill"></i>
+                          </button>
+                        </td>
+                      </tr>
                     );
-                })
-              }
+                  })
+                : null}
             </tbody>
           </table>
         </div>
